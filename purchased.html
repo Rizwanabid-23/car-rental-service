@@ -78,7 +78,10 @@
 
 
     <h1>History</h1>
-    <div id="valuesContainer"></div>
+    <h5>User Name</h5>
+    <div id="valuesContainer">
+        
+    </div>
 
 
     <script>
@@ -87,7 +90,7 @@
 
         // Create a HTML list to display the values
         const list = document.createElement('ul');
-
+let counter=0;
         // Iterate over the values and create list items
         values.forEach(value => {
             const listItem = document.createElement('li');
@@ -120,9 +123,23 @@
             } catch {
                 listItem.textContent = value;
             }
-
+            if(counter!=1)
+            {
+                list.appendChild(listItem);
+            }
             // Append the list item to the list
-            list.appendChild(listItem);
+            
+            if(counter==1)
+            {
+                const nested0= document.createElement('br');
+                list.appendChild(nested0);
+                listItem.textContent += 'Password';
+                list.appendChild(listItem);
+                const nested= document.createElement('br');
+                list.appendChild(nested);
+            }
+            
+            counter++;
         });
 
         // Display the list in the valuesContainer
