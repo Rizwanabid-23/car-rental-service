@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car rental</title>
+
+  <!-- 
+    - favicon
+  -->
+  <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <!-- <img src="./assets/images/logo.svg" alt="Ridex logo"> -->
+      </a>
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li>
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+          <li>
+            <a href="cars.html" class="navbar-link" data-nav-link>Explore cars</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>About us</a>
+          </li>
+          <li>
+            <!-- <a href="#blog" class="navbar-link" data-nav-link>Blog</a> -->
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <div class="header-contact">
+          <!-- <a href="tel:88002345678" class="contact-link">8 800 234 56 78</a> -->
+
+          <!-- <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span> -->
+        </div>
+
+        <a href="sign up.html" class="btn" aria-labelledby="aria-label-txt">
+          <ion-icon name="car-outline"></ion-icon>
+          <span id="aria-label-txt">Sign Up</span>
+        </a>
+
+        <a href="#" class="btn user-btn" aria-label="Profile">
+          <ion-icon name="person-outline">Sign In</ion-icon>
+          <span id="aria-label-txt">Sign In</span>
+
+        </a>
+
+        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home">
+        <div class="container">
+
+          <div class="hero-content">
+            <h2 class="h1 hero-title">Booking a Car has never been easier</h2>
+
+            <!-- <p class="hero-text">
+              Live in New York, New Jerset and Connecticut!
+            </p> -->
+          </div>
+
+          <div class="hero-banner"></div>
+        </div>
+      </section>
+
+      <!-- 
+        - #FEATURED CAR
+      -->
+
+      <section class="section featured-car" id="featured-car">
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">Featured cars</h2>
+
+            <a href="cars.html" class="featured-car-link">
+              <span>View more</span>
+
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+
+          <ul class="featured-car-list">
+
+            <li>
+              <div class="featured-car-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/car3.jpg" alt="Hyundai Elantra" loading="lazy" width="440" height="300"
+                    class="w-100">
+                </figure>
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Hyundai Elantra</a>
+                    </h3>
+                    <data class="year" value="2022">2022</data>
+                  </div>
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+                      <span class="card-item-text">5 People</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <span class="card-item-text">11km / 1-litre</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+                  <div class="card-price-wrapper">
+
+                    <p class="card-price">
+                      <strong>Rs.7500</strong> / day
+                    </p>
+                    <button class="btn">Rent now</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="./assets/images/car4.png" alt="Parado" loading="lazy" width="440" height="300"
+                    class="w-100">
+                </figure>
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Parado</a>
+                    </h3>
+                    <data class="year" value="2019">2019</data>
+                  </div>
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+                      <span class="card-item-text">5 People</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+                      <span class="card-item-text">Diesel</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <span class="card-item-text">7.2km / 1-litre</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+                  <div class="card-price-wrapper">
+
+                    <p class="card-price">
+                      <strong>Rs.13000</strong> / day
+                    </p>
+                    <button class="btn">Rent now</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="./assets/images/car7.jpg" alt="MG HS 1.5" loading="lazy" width="440" height="300"
+                    class="w-100">
+                </figure>
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">MG HS 1.5 Turbo</a>
+                    </h3>
+                    <data class="year" value="2021">2021</data>
+                  </div>
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+                      <span class="card-item-text">5 People</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+                      <span class="card-item-text">Petrol</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <span class="card-item-text">9km / 1-litre</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+                  <div class="card-price-wrapper">
+
+                    <p class="card-price">
+                      <strong>Rs.17000</strong> / day
+                    </p>
+                    <button class="btn">Rent now</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+            <li>
+              <div class="featured-car-card">
+                <figure class="card-banner">
+                  <img src="./assets/images/car8.jpg" alt="Hyundai Tucson" loading="lazy" width="440" height="300"
+                    class="w-100">
+                </figure>
+                <div class="card-content">
+                  <div class="card-title-wrapper">
+                    <h3 class="h3 card-title">
+                      <a href="#">Hyundai Tucson</a>
+                    </h3>
+                    <data class="year" value="2021">2021</data>
+                  </div>
+                  <ul class="card-list">
+                    <li class="card-list-item">
+                      <ion-icon name="people-outline"></ion-icon>
+                      <span class="card-item-text">5 People</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="flash-outline"></ion-icon>
+                      <span class="card-item-text">Diesel</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="speedometer-outline"></ion-icon>
+                      <span class="card-item-text">8km / 1-litre</span>
+                    </li>
+                    <li class="card-list-item">
+                      <ion-icon name="hardware-chip-outline"></ion-icon>
+                      <span class="card-item-text">Automatic</span>
+                    </li>
+                  </ul>
+                  <div class="card-price-wrapper">
+
+                    <p class="card-price">
+                      <strong>Rs.17000</strong> / day
+                    </p>
+                    <button class="btn">Rent now</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <!-- <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" alt="Ridex logo">  
+          </a> -->
+
+          <p class="footer-text">
+            Search for cheap rental cars in your city. With a diverse fleet of 40+ vehicles, we offer our
+            consumers an attractive and fun selection.
+          </p>
+        </div>
+
+        <ul class="footer-list">
+
+          <!-- <li>
+            <p class="footer-list-title">Company</p>
+          </li> -->
+          <li>
+            <a href="#" class="footer-link">About us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Our Cars</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contacts</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-skype"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
