@@ -1,55 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>About Us</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- 
       - google font link
     -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
-  <title>Sign Up</title>
-  <style>
-
-    .container1 {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      /* cursor: pointer; */
-    }
-
-
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-
-
-
-    .message {
-      margin-top: 10px;
-      text-align: center;
-      color: #666;
-    }
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+      rel="stylesheet">
 </head>
 <body>
-    <header class="header" data-header style="background-color: azure;">
+    <header class="header" data-header style="background-color:azure;">
         <div class="container">
     
           <div class="overlay" data-overlay></div>
@@ -75,8 +40,10 @@
           </nav>
     
           <div class="header-actions">
+    
             <div class="header-contact">
               <!-- <a href="tel:88002345678" class="contact-link">8 800 234 56 78</a> -->
+    
               <!-- <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span> -->
             </div>
     
@@ -101,59 +68,17 @@
     
         </div>
       </header>
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-
-
-  <div class="container1" id="signupContainer">
-    <h1>Sign Up</h1>
-    <input type="text" id="newUsername" placeholder="Username">
-    <input type="password" id="newPassword" placeholder="Password">
-    <button onclick="signUp()">Sign Up</button>
-    <p class="message">Already have an account? <a href="sign in.html" onclick="showSignIn()">Sign In</a></p>
-  </div>
-
-  <script>
-
-
-    function signUp() {
-      const username = document.getElementById('newUsername').value;
-      const password = document.getElementById('newPassword').value;
-
-      // Check if the username is already taken
-      const storedUsername = localStorage.getItem('username');
-
-      if (storedUsername === username) {
-        alert('Username already taken.');
-      } else {
-        // Store the new username and password in local storage
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password);
-        // localStorage.clear()
-        alert('Sign up successful!');
-        // Perform further actions after successful sign-up
-      }
-    }
-
-    function showSignUp() {
-      document.getElementById('signupContainer').style.display = 'block';
-      document.getElementById('username').value = '';
-      document.getElementById('password').value = '';
-    }
-
     
-  </script>
+
+
+<h4>About Us</h4>
+Search for cheap rental cars in your city. With a diverse fleet of 40+ vehicles, we offer our consumers an attractive and fun selection.
+<br>
+
+
+
+
+
+
 </body>
 </html>
