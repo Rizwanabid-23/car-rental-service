@@ -71,28 +71,65 @@
 
         </div>
     </header>
+    <br>
+    <br>
+    <br>
+    <br>
 
+
+    <h1>History</h1>
+    <div id="valuesContainer"></div>
 
 
     <script>
-        // Get the total number of items in local storage
-        const itemCount = localStorage.length;
+        // Retrieve all values from local storage
+        const values = Object.values(localStorage);
 
-        // Retrieve all keys and values from local storage
-        const keys = [];
-        const values = [];
+        // Create a HTML list to display the values
+        const list = document.createElement('ul');
 
-        for (let i = 0; i < itemCount; i++) {
-            const key = localStorage.key(i);
-            const value = localStorage.getItem(key);
+        // Iterate over the values and create list items
+        values.forEach(value => {
+            const listItem = document.createElement('li');
 
-            keys.push(key);
-            values.push(value);
-        }
+            try {
+                const parsedValue = JSON.parse(value);
 
-        console.log('Keys:', keys);
-        console.log('Values:', values);
+                // Check if the value is in the expected format
+                if (
+                    typeof parsedValue === 'object' &&
+                    parsedValue !== null &&
+                    Object.keys(parsedValue).length === 1 &&
+                    parsedValue.hasOwnProperty('undefined') &&
+                    Array.isArray(parsedValue.undefined.purchases)
+                ) {
+                    const purchasedItems = parsedValue.undefined.purchases;
+
+                    // Create nested list items for purchased items
+                    const nestedList = document.createElement('ul');
+                    purchasedItems.forEach(item => {
+                        const nestedListItem = document.createElement('li');
+                        nestedListItem.textContent = item;
+                        nestedList.appendChild(nestedListItem);
+                    });
+
+                    listItem.appendChild(nestedList);
+                } else {
+                    listItem.textContent = value;
+                }
+            } catch {
+                listItem.textContent = value;
+            }
+
+            // Append the list item to the list
+            list.appendChild(listItem);
+        });
+
+        // Display the list in the valuesContainer
+        const valuesContainer = document.getElementById('valuesContainer');
+        valuesContainer.appendChild(list);
     </script>
+
 
 
 </body>
