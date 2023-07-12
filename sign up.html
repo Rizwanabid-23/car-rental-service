@@ -22,7 +22,14 @@
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      /* cursor: pointer; */
+    }
 
 
     input[type="text"],
@@ -42,7 +49,7 @@
   </style>
 </head>
 <body>
-    <header class="header" data-header>
+    <header class="header" data-header style="background-color: azure;">
         <div class="container">
     
           <div class="overlay" data-overlay></div>
@@ -50,7 +57,7 @@
           <a href="#" class="logo">
             <!-- <img src="./assets/images/logo.svg" alt="Ridex logo"> -->
           </a>
-          <nav class="navbar" data-navbar>
+          <nav class="navbar" data-navbar style="background-color: azure;">
             <ul class="navbar-list">
               <li>
                 <a href="index.html" class="navbar-link" data-nav-link>Home</a>
@@ -79,7 +86,7 @@
             </a>
     
             <a href="sign in.html" class="btn user-btn" aria-label="Profile">
-              <ion-icon name="person-outline">Sign In</ion-icon>
+              <ion-icon name="person-outline"></ion-icon>
               <span id="aria-label-txt">Sign In</span>
     
             </a>
@@ -102,7 +109,8 @@
 <br>
 <br>
 <br>
-
+<br>
+<br>
 
 
 
@@ -114,7 +122,7 @@
     <input type="text" id="newUsername" placeholder="Username">
     <input type="password" id="newPassword" placeholder="Password">
     <button onclick="signUp()">Sign Up</button>
-    <p class="message">Already have an account? <a href="#" onclick="showSignIn()">Sign In</a></p>
+    <p class="message">Already have an account? <a href="sign in.html" onclick="showSignIn()">Sign In</a></p>
   </div>
 
   <script>

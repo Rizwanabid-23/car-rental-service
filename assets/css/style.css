@@ -295,7 +295,7 @@ button, a { transition: var(--transition); }
 }
 
 .navbar {
-  background: var(--alice-blue-1);
+  /* background: var(--alice-blue-1); */
   position: fixed;
   top: 70px;
   bottom: 0;
@@ -307,7 +307,7 @@ button, a { transition: var(--transition); }
   box-shadow: var(--shadow-1);
   visibility: hidden;
   transition: 0.25s cubic-bezier(0.51, 0.03, 0.64, 0.28);
-  background-color:beige;
+  
 }
 
 .navbar.active {
