@@ -48,7 +48,7 @@
             <a href="#" class="navbar-link" data-nav-link>About us</a>
           </li>
           <li>
-            <!-- <a href="#blog" class="navbar-link" data-nav-link>Blog</a> -->
+            <a href="purchased.html" class="navbar-link" data-nav-link>History</a>
           </li>
         </ul>
       </nav>
@@ -67,7 +67,7 @@
         </a>
 
         <a href="sign in.html" class="btn user-btn" aria-label="Profile">
-          <ion-icon name="person-outline">Sign In</ion-icon>
+          <ion-icon name="person-outline"></ion-icon>
           <span id="aria-label-txt">Sign In</span>
 
         </a>
@@ -82,6 +82,33 @@
 
     </div>
   </header>
+
+
+
+  <script>
+    const storedData = JSON.parse(localStorage.getItem('userData')) || {};
+  
+  // Function to add a new purchase for a user
+  function book(product) {
+    const userId=localStorage.getItem('username').value;
+    // Check if the user already exists in the stored data
+    if (storedData.hasOwnProperty(userId)) {
+      // User exists, add the product to their purchases array
+      storedData[userId].purchases.push(product);
+    } else {
+      // User doesn't exist, create a new entry with the product
+      storedData[userId] = {
+        userId,
+        purchases: [product]
+      };
+    }
+  
+    // Store the updated data back to local storage
+    localStorage.setItem('userData', JSON.stringify(storedData));
+  }
+  </script>
+
+
 
   <main>
     <article>
@@ -161,7 +188,7 @@
                     <p class="card-price">
                       <strong>Rs.7500</strong> / day
                     </p>
-                    <button class="btn">Rent now</button>
+                    <button class="btn" onclick="book('Hyundai Elantra')">Rent now</button>
                   </div>
                 </div>
               </div>
@@ -203,7 +230,7 @@
                     <p class="card-price">
                       <strong>Rs.13000</strong> / day
                     </p>
-                    <button class="btn">Rent now</button>
+                    <button class="btn" onclick="book('Prado')">Rent now</button>
                   </div>
                 </div>
               </div>
@@ -245,7 +272,7 @@
                     <p class="card-price">
                       <strong>Rs.17000</strong> / day
                     </p>
-                    <button class="btn">Rent now</button>
+                    <button class="btn" onclick="book('MG HS 1.5 Turbo')">Rent now</button>
                   </div>
                 </div>
               </div>
@@ -288,7 +315,7 @@
                     <p class="card-price">
                       <strong>Rs.17000</strong> / day
                     </p>
-                    <button class="btn">Rent now</button>
+                    <button class="btn" onclick="book('Hyundai Tucson')">Rent now</button>
                   </div>
                 </div>
               </div>
@@ -333,7 +360,7 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Contacts</a>
+            <!-- <a href="#" class="footer-link">Contacts</a> -->
           </li>
 
         </ul>
